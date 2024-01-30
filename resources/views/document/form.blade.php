@@ -16,7 +16,7 @@
             <div class="col-md-6">
                 <div class="form-group mb-2">
                     {{ Form::label('onlyuser', 'Only User') }}
-                    {{ Form::text('onlyuser', $document->onlyuser, ['class' => 'form-control' . ($errors->has('onlyuser') ? ' is-invalid' : ''), 'placeholder' => 'Onlyuser']) }}
+                    {{ Form::select('onlyuser', $users->pluck('name', 'id'), $document->onlyuser, ['class' => 'form-control select2' . ($errors->has('onlyuser') ? ' is-invalid' : ''), 'placeholder' => 'Select User']) }}
                     {!! $errors->first('onlyuser', '<div class="invalid-feedback">:message</div>') !!}
                 </div>
                 <div class="form-group mb-2">
@@ -43,7 +43,6 @@
                 @endif
             </div>
         </div>
-
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group mb-2">
@@ -59,3 +58,13 @@
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function() {
+        $('.select2').select2({
+            placeholder: "Select an option",
+            allowClear: true,
+            width: '100%'
+        });
+    });
+</script>
