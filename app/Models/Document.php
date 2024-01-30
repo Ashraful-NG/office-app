@@ -7,11 +7,11 @@ use Illuminate\Support\Facades\Storage;
 
 class Document extends Model
 {
-    
+
     static $rules = [
-		'title' => 'required',
-		'status' => 'required',
-		'file_path' => 'required',
+        'title' => 'required',
+        'status' => 'required',
+        'file_path' => 'required',
     ];
 
     protected $perPage = 20;
@@ -21,7 +21,7 @@ class Document extends Model
      *
      * @var array
      */
-    protected $fillable = ['title','tag','onlyuser','status','file_path','description'];
+    protected $fillable = ['title', 'tag', 'onlyuser', 'status', 'file_path', 'description'];
 
     public function deleteFile()
     {
@@ -32,4 +32,8 @@ class Document extends Model
         }
     }
 
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'onlyuser');
+    }
 }
