@@ -5,18 +5,19 @@
 @endsection
 
 @section('content')
-    <section class="content container-fluid">
+    <section class="content container">
         <div class="">
             <div class="col-md-12">
 
                 @includeif('partials.errors')
 
-                <div class="card card-default">
+                <div class="card bg-white">
                     <div class="card-header">
                         <span class="card-title">{{ __('Update') }} Document</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('document.update', $document->id) }}"  role="form" method= 'POST'  enctype='multipart/form-data'>
+                        <form method="POST" action="{{ route('document.update', $document->id) }}" role="form"
+                            method= 'POST' enctype='multipart/form-data'>
                             {{ method_field('PATCH') }}
                             @csrf
 

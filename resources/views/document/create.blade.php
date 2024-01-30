@@ -5,18 +5,19 @@
 @endsection
 
 @section('content')
-    <section class="content container-fluid">
+    <section class="content container">
         <div class="row">
             <div class="col-md-12">
 
                 @includeif('partials.errors')
 
-                <div class="card card-default">
+                <div class="card bg-white">
                     <div class="card-header">
                         <span class="card-title">{{ __('Create') }} Document</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('document.store') }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('document.store') }}" role="form"
+                            enctype="multipart/form-data">
                             @csrf
 
                             @include('document.form')
