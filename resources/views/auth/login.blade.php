@@ -6,7 +6,7 @@
             <div class="login-section">
                 <div>
                     <h3 class="mb-4 h4 d-flex align-items-center justify-content-center">
-                        <img src="{{ asset('img/caab_logo.png') }}" width="30" alt="CAAB" class="me-2">
+                        <img src="{{ asset('img/caab24.png') }}" width="30" alt="CAAB" class="me-2">
                         <span>LOGIN</span>
                     </h3>
                     <form method="POST" action="{{ route('login') }}">

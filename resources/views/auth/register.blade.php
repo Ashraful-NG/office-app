@@ -7,7 +7,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-12">
                         <h3 class="mb-4 h4 d-flex align-items-center justify-content-center">
-                            <img src="{{ asset('img/caab_logo.png') }}" width="30" alt="CAAB" class="me-2">
+                            <img src="{{ asset('img/caab24.png') }}" width="30" alt="CAAB" class="me-2">
                             <span>REGISTER</span>
                         </h3>
                         <form method="POST" action="{{ route('register') }}">
