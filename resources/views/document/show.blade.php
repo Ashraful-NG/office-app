@@ -49,7 +49,7 @@
                     </div>
              
 <div
-    class="alert alert-danger"
+    class="alert alert-danger m-5"
     role="alert"
 >
 <h1>To Zoom In and Out on a Web Page:</h1>
