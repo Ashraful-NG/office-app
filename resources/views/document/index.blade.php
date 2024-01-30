@@ -38,13 +38,15 @@
 
                     <div class="card-body">
                         <div class="table-responsive">
-                            <form method="get" action="{{ route('document.index') }}">
-                                <div class="form-group mb-2">
-                                    <input type="text" name="search" value="{{ $search }}"
-                                        placeholder="Search by title, tag, status, file path, or description">
-                                    <button type="submit">Search</button>
-                                </div>
-                            </form>
+                            <div class="container mt-3">
+                                <form method="get" action="{{ route('document.index') }}">
+                                    <div class="input-group mb-3">
+                                        <input type="text" name="search" value="{{ $search }}" class="form-control"
+                                               placeholder="Search by title, tag, status, file path, or description" aria-label="Search" aria-describedby="basic-addon2">
+                                        <button type="submit" class="btn btn-primary">Search</button>
+                                    </div>
+                                </form>
+                            </div>
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
