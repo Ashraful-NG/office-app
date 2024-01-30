@@ -9,9 +9,9 @@ class Document extends Model
 {
 
     static $rules = [
-        'title' => 'required',
+        'title' => 'required|unique:documents,title',
         'status' => 'required',
-        'file_path' => 'required',
+        'file_path' => 'required|file|mimes:pdf,doc,docx',
     ];
 
     protected $perPage = 20;
