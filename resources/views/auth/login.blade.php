@@ -14,7 +14,7 @@
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="basic-addon1">
-                                    <img src="{{ asset('img/icons8-user-16.png') }}" alt="">
+                                    <img src="{{ asset('img/icons8-user-16.png') }}" width="100" alt="CAAB">
                                 </span>
                             </div>
                             <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
