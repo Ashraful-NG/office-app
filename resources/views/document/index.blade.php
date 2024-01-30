@@ -5,11 +5,9 @@
 @endsection
 
 @section('content')
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card bg-white">
-                    <div class="card-header">
+<div class="container-fluid">
+    <!-- Your content goes here -->
+    <div class="row">
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
@@ -24,7 +22,7 @@
                                 </div>
                             @endif
                         </div>
-                    </div>
+                    
                     @if ($message = Session::get('success'))
                         <div class="alert alert-success m-3" id="successAlert">
                             <p>{{ $message }}</p>
@@ -56,9 +54,7 @@
                                         <th>Tag</th>
                                         <th>Onlyuser</th>
                                         <th>Status</th>
-                                        <th>File Name</th>
-                                        <th>Description</th>
-
+                                        <th>File Name</th>                                        
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -73,7 +69,7 @@
                                                 <td>{{ $document->user->name }}</td>
                                                 <td>{{ $document->status }}</td>
                                                 <td>{{ basename($document->file_path) }}</td>
-                                                <td>{{ $document->description }}</td>
+                                                {{-- <td>{{ $document->description }}</td> --}}
 
                                                 <td>
                                                     
@@ -117,9 +113,8 @@
                             </table>
                         </div>
                     </div>
-                </div>
+                
                 {!! $documents->links() !!}
             </div>
         </div>
-    </div>
 @endsection
