@@ -50,9 +50,37 @@
                 </div>
             </div>
 
-            <iframe src="{{ Storage::url($document->file_path) }}#view=fit&toolbar=0&navpanes=0" width="100%" height="600px"></iframe>
-
-
+            <div class="container mt-3">
+                <form method="get" action="{{ route('document.index') }}">
+                    <!-- Your form content -->
+                </form>
+        
+                <div class="embed-responsive embed-responsive-16by9 mt-3 iframe-zoom">
+                    <iframe class="embed-responsive-item" src="{{ Storage::url($document->file_path) }}#view=fit&toolbar=0&navpanes=0" width="100%" height="600px"></iframe>
+                </div>
+        
+                <!-- Zoom buttons -->
+                <div class="btn-group zoom-btns" role="group" aria-label="Zoom Options">
+                    <button type="button" class="btn btn-secondary" onclick="zoomIn()">Zoom In</button>
+                    <button type="button" class="btn btn-secondary" onclick="zoomOut()">Zoom Out</button>
+                </div>
+            </div>
         </div>
     </section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JavaScript for zooming -->
+<script>
+    function zoomIn() {
+        var iframe = document.querySelector('.iframe-zoom');
+        iframe.style.transform = 'scale(1.2)'; // You can adjust the zoom level
+    }
+
+    function zoomOut() {
+        var iframe = document.querySelector('.iframe-zoom');
+        iframe.style.transform = 'scale(1)';
+    }
+</script>
 @endsection
