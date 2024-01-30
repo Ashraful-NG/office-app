@@ -11,7 +11,7 @@
 
                 @includeif('partials.errors')
 
-                <div class="card card-default">
+                <div class="card bg-white">
                     <div class="card-header">
                         <span class="card-title">{{ __('Create') }} Document</span>
                     </div>
@@ -21,7 +21,7 @@
                             @csrf
 
                             @include('document.form')
-                            
+
                         </form>
                     </div>
                 </div>

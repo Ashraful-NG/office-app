@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
 @section('template_title')
-    {{ $document->name ?? "{{ __('Show') Document" }}
+    {{ $document->name ?? " __('Show') Document" }}
 @endsection
 
 @section('content')
-    <section class="content container-fluid">
+    <section class="content container">
         <div class="row">
             <div class="col-md-12">
-                <div class="card">
+                <div class="card bg-white">
                     <div class="card-header">
                         <div class="float-left">
                             <span class="card-title">{{ __('Show') }} Document</span>
@@ -19,7 +19,7 @@
                     </div>
 
                     <div class="card-body">
-                        
+
                         <div class="form-group">
                             <strong>Title:</strong>
                             {{ $document->title }}
@@ -39,7 +39,7 @@
                         <div class="form-group">
                             <strong>File Path:</strong>
                             {{ $document->file_path }}
-                          
+
                         </div>
                         <div class="form-group">
                             <strong>Description:</strong>
