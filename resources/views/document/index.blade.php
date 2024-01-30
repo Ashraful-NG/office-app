@@ -74,30 +74,33 @@
                                                 <td>{{ $document->description }}</td>
 
                                                 <td>
-                                                    <form action="{{ route('document.destroy', $document->id) }}" method="POST">
-
-                                                        @csrf
-                                                        @method('DELETE')
+                                                    
                                                     
                                                         @if (auth()->check() && auth()->user()->role && auth()->user()->role->name == 'superadmin')
+                                                        <div class="btn-group" role="group" aria-label="Document Actions">
                                                             <a class="btn btn-sm btn-primary" href="{{ route('document.show', $document->id) }}">
                                                                 <i class="fa fa-fw fa-eye"></i> {{ __('Show') }}
                                                             </a>
-                                                    
+                                                        
                                                             <a class="btn btn-sm btn-success" href="{{ route('document.edit', $document->id) }}">
                                                                 <i class="fa fa-fw fa-edit"></i> {{ __('Edit') }}
                                                             </a>
-                                                    
-                                                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this document?')">
-                                                                <i class="fa fa-fw fa-trash"></i> {{ __('Delete') }}
-                                                            </button>
+                                                        
+                                                            <form action="{{ route('document.destroy', $document->id) }}" method="POST" style="display: inline;">
+                                                                @csrf
+                                                                @method('DELETE')
+                                                        
+                                                                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this document?')">
+                                                                    <i class="fa fa-fw fa-trash"></i> {{ __('Delete') }}
+                                                                </button>
+                                                            </form>
+                                                        </div>
+                                                        
                                                         @else
                                                             <a class="btn btn-sm btn-primary" href="{{ route('document.show', $document->id) }}">
                                                                 <i class="fa fa-fw fa-eye"></i> {{ __('Show') }}
                                                             </a>
                                                         @endif
-                                                    
-                                                    </form>
                                                     
                                                 </td>
                                             </tr>
