@@ -68,7 +68,7 @@
 
                                                 <td>{{ $document->title }}</td>
                                                 <td>{{ $document->tag }}</td>
-                                                <td>{{ $document->onlyuser }}</td>
+                                                <td>{{ $document->user->name }}</td>
                                                 <td>{{ $document->status }}</td>
                                                 <td>{{ basename($document->file_path) }}</td>
                                                 <td>{{ $document->description }}</td>

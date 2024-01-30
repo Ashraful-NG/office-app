@@ -20,8 +20,8 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\User::factory()->create([
             'name' => 'Super Admin',
-            'email' => 'shakilaust81@gmail.com',
-            'password' => bcrypt('Test@12345'),
+            'email' => 'caab-doc@gmail.com',
+            'password' => bcrypt('123456789'),
             'role_id' => 1,
         ]);
     }

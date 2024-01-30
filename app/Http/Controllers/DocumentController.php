@@ -26,7 +26,7 @@ class DocumentController extends Controller
 
         $search = $request->input('search');
 
-        $documents = Document::when($search, function ($query) use ($search) {
+        $documents = Document::with('user')->when($search, function ($query) use ($search) {
             $query->where('title', 'like', '%' . $search . '%')
                 ->orWhere('tag', 'like', '%' . $search . '%')
                 ->orWhere('status', 'like', '%' . $search . '%')
