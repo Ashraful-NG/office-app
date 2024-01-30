@@ -47,8 +47,7 @@
                         </div>
 
                     </div>
-                </div>
-            </div>
+             
 <div
     class="alert alert-danger"
     role="alert"
@@ -63,5 +62,7 @@ Note: This zoom functionality works on most web browsers and applications that s
            <iframe src="{{ Storage::url($document->file_path) }}#view=fit&toolbar=0&navpanes=0&scrollbar=0" width="100%" height="600px"></iframe>
 
         </div>
+    </div>
+</div>
     </section>
 @endsection
