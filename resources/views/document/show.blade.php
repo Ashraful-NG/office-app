@@ -50,7 +50,7 @@
                 </div>
             </div>
 
-            <iframe style='pointer-events: none;' src="{{ Storage::url($document->file_path) }}" width="100%" height="600px"></iframe>
+            <iframe style='pointer-events: none;' src="{{ Storage::url($document->file_path) }}#view=fit&toolbar=0&navpanes=0" width="100%" height="600px"></iframe>
 
 
         </div>
