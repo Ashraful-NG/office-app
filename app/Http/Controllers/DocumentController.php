@@ -3,133 +3,130 @@
 namespace App\Http\Controllers;
 
 use App\Models\Document;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class DocumentController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+
+    public function __construct()
     {
-        $documents = Document::paginate();
+        // Apply 'role' middleware to specific actions
 
-        $data = [
-            "documents" => $documents
-        ];
 
-        return view("document.index", $data);
+
+        // if (auth()->user() && in_array(auth()->user()->role->name, $roles)) {
+        //    'dsfsdfsdfdsfsdfsdf';
+        // }
+        //$this->middleware('role:superadmin')->only(['create', 'store', 'edit', 'update', 'destroy']);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+    public function index(Request $request)
+    {
+
+        $search = $request->input('search');
+
+        $documents = Document::when($search, function ($query) use ($search) {
+            $query->where('title', 'like', '%' . $search . '%')
+                ->orWhere('tag', 'like', '%' . $search . '%')
+                ->orWhere('status', 'like', '%' . $search . '%')
+                ->orWhere('file_path', 'like', '%' . $search . '%')
+                ->orWhere('description', 'like', '%' . $search . '%');
+        })->paginate();
+
+        return view('document.index', compact('documents', 'search'))
+            ->with('i', (request()->input('page', 1) - 1) * $documents->perPage());
+    }
+
+
+
     public function create()
     {
-        return view('document.create');
+        $document = new Document();
+        $users = User::all();
+        return view('document.create', compact('document', 'users'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        $data = $request->validate([
+        $request->validate([
             'title' => 'required',
-            'doc_file' => 'required|mimes:pdf,doc,docx,jpg,jpeg,png,gif,txt|max:5120',
+            'status' => 'required',
+            'file_path' => 'required|file|mimes:pdf,doc,docx', // Adjust allowed file types as needed
         ]);
 
-        $document = $request->except('doc_file');
+        // Handle file upload
+        $file = $request->file('file_path');
+        $filePath = $file->store('public/document'); // 'documents' is the storage folder where the file will be saved
 
-        if ($request->hasFile('doc_file')) {
-            $file = $request->file('doc_file');
-            $document['file_path'] = $this->fileUpload($file);
-        } else {
-            session()->flash('type', 'Danger');
-            session()->flash('message', 'File not found.');
-            return redirect()->back()->withInput();
-        }
+        // Create a new document with the validated data and file path
+        $document = Document::create([
+            'title' => $request->input('title'),
+            'tag' => $request->input('tag'),
+            'onlyuser' => $request->input('onlyuser'),
+            'status' => $request->input('status'),
+            'file_path' => $filePath, // Store the file path in the database
+            'description' => $request->input('description'),
+        ]);
 
-        $doc = Document::create($document);
-
-        if ($doc) {
-            session()->flash('type', 'Success');
-            session()->flash('message', 'Created successfully');
-            return redirect()->route('documents.index');
-        } else {
-            session()->flash('type', 'Danger');
-            session()->flash('message', 'Something wrong');
-            return redirect()->back()->withInput();
-        }
+        return redirect()->route('document.index')->with('success', 'Document created successfully.');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Document $document)
+
+    public function show($id)
     {
-        //
+        $document = Document::find($id);
+
+        return view('document.show', compact('document'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Document $document)
+    public function edit($id)
     {
-        $data = [
-            'document' => $document,
-        ];
-
-        return view('document.edit', $data);
+        $document = Document::find($id);
+        $users = User::all();
+        return view('document.edit', compact('document', 'users'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+
     public function update(Request $request, Document $document)
     {
         $request->validate([
             'title' => 'required',
-            'doc_file' => 'mimes:pdf,doc,docx,jpg,jpeg,png,gif,txt|max:5120',
+            'status' => 'required',
+            'file_path' => 'nullable|file|mimes:pdf,doc,docx', // Adjust allowed file types as needed
         ]);
 
-        $document_new = $request->except('doc_file');
+        // Update other fields
+        $document->update([
+            'title' => $request->input('title'),
+            'tag' => $request->input('tag'),
+            'onlyuser' => $request->input('onlyuser'),
+            'status' => $request->input('status'),
+            'description' => $request->input('description'),
+        ]);
 
-        if ($request->hasFile('doc_file')) {
-            $filePath = storage_path('app/public/' . $document['file_path']);
-            $this->removeFile($filePath);
-            $file = $request->file('doc_file');
-            $document_new['file_path'] = $this->fileUpload($file);
+        // Handle file upload if a new file is provided
+        if ($request->hasFile('file_path')) {
+            // Delete the previous file if it exists
+            // Assuming you have a method in your Document model to handle file deletion
+            $document->deleteFile(); // Implement this method in your Document model
+
+            // Handle the new file upload
+            $file = $request->file('file_path');
+            $filePath = $file->store('public/document'); // 'documents' is the storage folder where the file will be saved
+            $document->update(['file_path' => $filePath]); // Update the file path in the database
         }
 
-        $document->update($document_new);
-        session()->flash('type', 'Success');
-        session()->flash('message', 'Updated successfully');
-        return redirect()->route('documents.index');
-
+        return redirect()->route('document.index')->with('success', 'Document updated successfully');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Document $document)
+
+
+    public function destroy($id)
     {
-        if ($document) {
-            Document::destroy($document->id);
+        $document = Document::find($id)->delete();
 
-            if ($document['file_path']) {
-                $filePath = storage_path('app/public/' . $document['file_path']);
-                // dd($filePath);
-                $this->removeFile($filePath);
-            }
-
-            session()->flash('type', 'Success');
-            session()->flash('message', 'Deleted successfully');
-            return redirect()->back();
-        } else {
-            session()->flash('type', 'Danger');
-            session()->flash('message', 'Something went wrong');
-            return redirect()->back();
-        }
+        return redirect()->route('document.index')
+            ->with('success', 'Document deleted successfully');
     }
 }

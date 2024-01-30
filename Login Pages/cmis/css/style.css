@@ -1,0 +1,116 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background: url("../back.png") no-repeat;
+  background-size: cover;
+}
+
+#login {
+  padding: 15px;
+  background-color: rgba(255, 183, 77, 0);
+  min-height: 100vh;
+}
+
+#login .login-panel {
+  text-align: center;
+  width: 450px;
+  margin: auto;
+}
+
+#login .login-panel .logo {
+  width: 260px;
+  margin-bottom: 50px;
+}
+
+#login .login-panel .login-section {
+  padding: 50px 30px;
+  background: rgba(255, 255, 255, 0.664);
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+#login .login-panel .login-section form .input-group .input-group-prepend {
+  width: 40px;
+}
+
+#login .login-panel .login-section form .input-group .input-group-prepend .input-group-text {
+  padding: 0;
+  background-color: transparent;
+  height: 100%;
+  border-radius: 5px 0 0 5px;
+}
+
+#login .login-panel .login-section form .input-group .input-group-prepend .input-group-text img {
+  width: 15px;
+  margin: auto;
+}
+
+#login .login-panel .login-section form .input-group .input-group-append {
+  border: 1px solid #ced4da;
+  border-left: 0;
+  border-radius: 0 5px 5px 0;
+  width: 40px;
+}
+
+#login .login-panel .login-section form .input-group .input-group-append .input-group-text {
+  padding: 0;
+  background-color: transparent;
+  height: 100%;
+  border: 0;
+  padding: 0 5px;
+}
+
+#login .login-panel .login-section form .input-group .form-control {
+  line-height: 33px;
+  padding: 0;
+  padding: 5px 15px;
+}
+
+#login .login-panel .login-section form .submit-btn {
+  background-color: #ffb74d;
+  color: #fff;
+  width: 100%;
+  display: block;
+  line-height: 45px;
+  padding: 0;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+#login .login-panel .login-section form .submit-btn:hover {
+  opacity: 0.8;
+}
+
+#login .login-panel .login-section a.login-link {
+  color: #ffb74d;
+  text-decoration: none;
+}
+
+#login .login-panel .login-section a.login-link:hover {
+  opacity: 0.8;
+}
+
+#login .login-panel .login-section .forget {
+  text-align: left;
+}
+
+#login .login-panel .login-section .forget .form-check-input {
+  border-radius: 0;
+}
+
+#login .login-panel .login-section .forget a {
+  text-decoration: none;
+  color: #262626;
+}
+
+#login .login-panel .login-section .forget a:hover {
+  opacity: 0.8;
+}
+
+.form-control:focus,
+.btn:focus,
+.form-check-input:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+}
+/*# sourceMappingURL=style.css.map */

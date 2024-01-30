@@ -1,15 +1,31 @@
 @extends('layouts.app')
 
+@section('template_title')
+    {{ __('Create') }} Document
+@endsection
+
 @section('content')
-    <div class="container">
-        <div>
-            <h3 class="text-center">
-                Create Document
-            </h3>
+    <section class="content container">
+        <div class="row">
+            <div class="col-md-12">
+
+                @includeif('partials.errors')
+
+                <div class="card bg-white">
+                    <div class="card-header">
+                        <span class="card-title">{{ __('Create') }} Document</span>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST" action="{{ route('document.store') }}" role="form"
+                            enctype="multipart/form-data">
+                            @csrf
+
+                            @include('document.form')
+
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-        <form action="{{ route('documents.store') }}" method="POST" enctype="multipart/form-data">
-            @csrf
-            @include('document.form')
-        </form>
-    </div>
+    </section>
 @endsection
