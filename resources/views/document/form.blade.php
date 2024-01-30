@@ -21,7 +21,7 @@
                 </div>
                 <div class="form-group mb-2">
                     {{ Form::label('status', 'Status') }}
-                    {{ Form::select('status', ['Test1' => 'Test1', 'Test2' => 'Test2', 'Test3' => 'Test3'], $document->status, ['class' => 'form-control' . ($errors->has('status') ? ' is-invalid' : ''), 'placeholder' => 'Select Status']) }}
+                    {{ Form::select('status', ['Publish' => 'Publish', 'Drift' => 'Drift'], $document->status, ['class' => 'form-control' . ($errors->has('status') ? ' is-invalid' : ''), 'placeholder' => 'Select Status']) }}
                     {!! $errors->first('status', '<div class="invalid-feedback">:message</div>') !!}
                 </div>
             </div>
