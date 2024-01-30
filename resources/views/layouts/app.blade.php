@@ -35,7 +35,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('documents.index') }}">Documents</a>
+                            <a class="nav-link" href="{{ route('document.index') }}">Documents</a>
                         </li>
                     </ul>
 

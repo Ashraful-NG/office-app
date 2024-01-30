@@ -12,8 +12,12 @@ return new class extends Migration {
     {
         Schema::create('documents', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->string('title')->unique()->index();
+            $table->string('tag')->nullable();
+            $table->integer('onlyuser')->nullable();
+            $table->string('status');
             $table->string('file_path');
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }
@@ -26,3 +30,4 @@ return new class extends Migration {
         Schema::dropIfExists('documents');
     }
 };
+

@@ -22,8 +22,12 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/documents', [DocumentController::class, 'index'])->name('documents.index');
+//  Route::get('/documents', [DocumentController::class, 'index'])->name('documents.index');
 
-Route::resource('documents', DocumentController::class)->except([
-    'index'
-])->middleware(['auth', 'role:superadmin']);
+// Route::resource('documents', DocumentController::class)->except([
+//     'index'
+// ])->middleware(['auth', 'role:superadmin']);
+
+
+Route::resource('document', DocumentController::class)->middleware(['auth']);
+ 
