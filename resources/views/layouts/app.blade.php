@@ -42,11 +42,13 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('document.index') }}">Documents</a>
-                        </li>
-                    </ul>
+                    @if (auth()->check())
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('document.index') }}">Documents</a>
+                            </li>
+                        </ul>
+                    @endif
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
