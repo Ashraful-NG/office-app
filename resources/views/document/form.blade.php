@@ -16,12 +16,12 @@
             <div class="col-md-6">
                 <div class="form-group mb-2">
                     {{ Form::label('onlyuser', 'Only User') }}
-                    {{ Form::select('onlyuser', $users->pluck('name', 'id'), $document->onlyuser, ['class' => 'form-control select2' . ($errors->has('onlyuser') ? ' is-invalid' : ''), 'placeholder' => 'Select User']) }}
+                    {{ Form::select('onlyuser', $users->pluck('name', 'id'), $document->onlyuser, ['class' => 'form-select' . ($errors->has('onlyuser') ? ' is-invalid' : ''), 'placeholder' => 'Select User']) }}
                     {!! $errors->first('onlyuser', '<div class="invalid-feedback">:message</div>') !!}
                 </div>
                 <div class="form-group mb-2">
                     {{ Form::label('status', 'Status') }}
-                    {{ Form::select('status', ['Publish' => 'Publish', 'Drift' => 'Drift'], $document->status, ['class' => 'form-control' . ($errors->has('status') ? ' is-invalid' : ''), 'placeholder' => 'Select Status']) }}
+                    {{ Form::select('status', ['Publish' => 'Publish', 'Drift' => 'Drift'], $document->status, ['class' => 'form-select' . ($errors->has('status') ? ' is-invalid' : ''), 'placeholder' => 'Select Status']) }}
                     {!! $errors->first('status', '<div class="invalid-feedback">:message</div>') !!}
                 </div>
             </div>
