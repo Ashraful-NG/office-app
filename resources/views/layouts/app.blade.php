@@ -14,6 +14,15 @@
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ asset('css/all.min.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"> --}}
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
@@ -83,6 +92,9 @@
             @yield('content')
         </main>
     </div>
+    <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
+    {{-- <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script> --}}
+    <script src="{{ asset('js/custom.js') }}"></script>
 </body>
 
 </html>

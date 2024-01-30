@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <section class="content container-fluid">
+    <section class="content container">
         <div class="">
             <div class="col-md-12">
 
@@ -16,7 +16,8 @@
                         <span class="card-title">{{ __('Update') }} Document</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('document.update', $document->id) }}"  role="form" method= 'POST'  enctype='multipart/form-data'>
+                        <form method="POST" action="{{ route('document.update', $document->id) }}" role="form"
+                            method= 'POST' enctype='multipart/form-data'>
                             {{ method_field('PATCH') }}
                             @csrf
 
