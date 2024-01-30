@@ -21,10 +21,15 @@
     <link rel="stylesheet" href="{{ asset('css/all.min.css') }}">
     {{-- <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
 
     <link rel="icon" href="{{ asset('img/caab24.png') }}" type="image/png">
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
+ 
+
 </head>
 
 <body>
@@ -55,13 +60,16 @@
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-danger" href="{{ route('login') }}">
+                                    {{ __('Login') }}
+                                </a>
+                            </li>
+                            
                             @endif
 
                             @if (Route::has('register'))
-                                <li class="nav-item">
+                                <li class="nav-item d-none">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif

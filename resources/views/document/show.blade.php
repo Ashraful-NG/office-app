@@ -47,12 +47,22 @@
                         </div>
 
                     </div>
-                </div>
-            </div>
+             
+<div
+    class="alert alert-danger m-5"
+    role="alert"
+>
+<h1>To Zoom In and Out on a Web Page:</h1>
+1. Hold down the "Ctrl" key on your keyboard.<br>
+2. While holding down the "Ctrl" key, scroll up (away from you) on your mouse wheel to zoom in.<br>
+3. Conversely, scroll down (towards you) while holding down the "Ctrl" key to zoom out.<br>
+Note: This zoom functionality works on most web browsers and applications that support zooming.<br>
+</div>
 
-            <iframe src="{{ Storage::url($document->file_path) }}" width="100%" height="600px"></iframe>
-
+           <iframe src="{{ Storage::url($document->file_path) }}#view=fit&toolbar=0&navpanes=0&scrollbar=0" width="100%" height="600px"></iframe>
 
         </div>
+    </div>
+</div>
     </section>
 @endsection
