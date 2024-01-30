@@ -5,7 +5,9 @@
 @endsection
 
 @section('content')
-<div class="container-fluid">
+<div class="container-fluid m-5 p-5" style="
+background: white;
+">
     <!-- Your content goes here -->
     <div class="row">
                         <div style="display: flex; justify-content: space-between; align-items: center;">
