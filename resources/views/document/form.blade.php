@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group mb-2">
-                    {{ Form::label('title', 'Title') }}
+                    {{ Form::label('title', 'Document Title') }}
                     {{ Form::text('title', $document->title, ['class' => 'form-control' . ($errors->has('title') ? ' is-invalid' : ''), 'placeholder' => 'Title']) }}
                     {!! $errors->first('title', '<div class="invalid-feedback">:message</div>') !!}
                 </div>
@@ -53,8 +53,8 @@
             </div>
         </div>
         <div class="text-center mt-3">
-            <button type="submit" class="btn btn-primary">{{ __('Submit') }}</button>
-            <a href="{{ route('document.index') }}" class="btn btn-secondary">{{ __('Cancel') }}</a>
+            <button type="submit" class="btn btn-primary btn-lg">{{ __('Submit') }}</button>
+            <a href="{{ route('document.index') }}" class="btn btn-secondary btn-lg">{{ __('Cancel') }}</a>
         </div>
     </div>
 </div>
