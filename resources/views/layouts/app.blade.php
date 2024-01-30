@@ -21,15 +21,15 @@
     <link rel="stylesheet" href="{{ asset('css/all.min.css') }}">
     {{-- <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-
-
-    <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Bootstrap 5 JS and Popper.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Scripts -->
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
+ 
 
 </head>
 
