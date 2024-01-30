@@ -55,7 +55,7 @@
         </div>
         <div class="text-center mt-3">
             <button type="submit" class="btn btn-primary">{{ __('Submit') }}</button>
-            <a href="{{ route('home') }}" class="btn btn-secondary">{{ __('Cancel') }}</a>
+            <a href="{{ route('document.index') }}" class="btn btn-secondary">{{ __('Cancel') }}</a>
         </div>
     </div>
 </div>
