@@ -50,7 +50,7 @@ class DocumentController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required',
+            'title' => 'required|unique:documents,title',
             'status' => 'required',
             'file_path' => 'required|file|mimes:pdf,doc,docx', // Adjust allowed file types as needed
         ]);

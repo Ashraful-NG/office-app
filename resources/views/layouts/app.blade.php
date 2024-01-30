@@ -22,7 +22,7 @@
     {{-- <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
-
+    <link rel="icon" href="{{ asset('img/caab24.png') }}" type="image/png">
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
