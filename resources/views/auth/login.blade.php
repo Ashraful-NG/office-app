@@ -6,7 +6,7 @@
             <div class="login-section">
                 <div>
                     <h3 class="mb-4 h4 d-flex align-items-center justify-content-center">
-                        <img src="{{ asset('img/caab24.png') }}" width="30" alt="CAAB" class="me-2">
+                        <img src="{{ asset('img/caab24.png') }}" width="100" alt="CAAB" class="me-2">
                         <span>LOGIN</span>
                     </h3>
                     <form method="POST" action="{{ route('login') }}">
@@ -14,7 +14,7 @@
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="basic-addon1">
-                                    <img src="{{ asset('img/icons8-user-16.png') }}" width="100" alt="CAAB">
+                                    <img src="{{ asset('img/icons8-user-16.png') }}" alt="">
                                 </span>
                             </div>
                             <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
