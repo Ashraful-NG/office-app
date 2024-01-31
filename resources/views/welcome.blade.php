@@ -104,7 +104,7 @@
                     </p>
                     
                     <a class="my-5" style="color:  #FFF; display: flex; height: 58px; padding: 16px 24px; justify-content: center; align-items: center; gap: 12px; border-radius: 18px; background:  #022C22; box-shadow: 0px 10px 20px 0px rgba(70, 16, 185, 0.30); width:150px; text-decoration: none; font-weight: 800;"
-                        href="{{ route('login') }}">{{ __('Login') }}</a>
+                        href="{{ route('login') }}">{{ __('Get Started') }}</a>
                 </div>
                 <div class="col-md-6">
                     <img src="{{ asset('Hero.png') }}" width="100%" alt="CAAB" class="me-2">
