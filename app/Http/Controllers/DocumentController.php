@@ -44,7 +44,7 @@ class DocumentController extends Controller
     {
         $user = User::all();
         $document = new Document();
-        return view('document.create', compact('document'));
+        return view('document.create', compact('document','user'));
     }
 
     public function store(Request $request)
@@ -83,8 +83,8 @@ class DocumentController extends Controller
     public function edit($id)
     {
         $document = Document::find($id);
-
-        return view('document.edit', compact('document'));
+        $user = User::all();
+        return view('document.edit', compact('document','user'));
     }
 
 
