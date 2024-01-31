@@ -2,14 +2,17 @@
 
 @section('content')
     <div class="container">
-        <div class="row">
-            <h2 class="text-center">Welcome</h2>
-        </div>
-        <div class="row justify-content-center ">
-            <div class="bg-white col-md-8 shadow p-5 my-5"> 
-               <h2> Welcome to <br>
-                Document Management System (DMS)</h2>
-
+        
+        
+            <div class="bg-white shadow p-5 my-5 rounded mx-auto " style="max-width: 600px">
+                <div class="row ">
+            <div class="col-md-4">
+                 <img src="{{ asset('img/caab24.png') }}" width="30" alt="CAAB" class="me-2">
+            </div>
+            <div class="col-md-8"> 
+                <h2> Welcome to <br>
+                 Document Management System (DMS)</h2>
+             </div>
             </div>
         </div>
     </div>
