@@ -90,7 +90,7 @@
             </div>
         </nav>
 
-        <div class="container" style="height: 100vh;">
+        <div class="container" style="height: 80vh;">
             <div class="row d-flex align-items-center justify-content-center my-5">
                 <div class="col-md-6">
                     <h2 style="color: #022C22; font-family: Poppins; font-size: 32px; font-style: normal; font-weight: 700;
@@ -116,10 +116,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <p>&copy; 2024 Your Company Name</p>
+                        <p class=" m-0">&copy; 2024 Your Company Name</p>
                     </div>
                     <div class="col-md-6 text-end text-white">
-                        <ul class="list-inline">
+                        <ul class="list-inline m-0">
                             <li class="list-inline-item"><a href="#" style="color: #FFF; text-decoration: none;">Terms</a>
                             </li>
                             <li class="list-inline-item"><a href="#" style="color: #FFF; text-decoration: none;">Privacy</a>
