@@ -38,7 +38,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="{{ asset('img/caab24.png') }}" width="30" alt="CAAB" class="me-2">
+                    <img src="{{ asset('img/caab24.png') }}" width="70" alt="CAAB" class="me-2">
                     DMS
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -119,7 +119,7 @@
 
 
         <div class="container" style="
-        height: 80vh;
+        height: 81vh;
     ">
             <div class="row d-flex align-items-center justify-content-center my-5">
                 <!-- Left Column -->
