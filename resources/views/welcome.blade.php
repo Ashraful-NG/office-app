@@ -7,7 +7,7 @@
             <div class="bg-white shadow p-5 my-5 rounded mx-auto " style="max-width: 600px">
                 <div class="row ">
             <div class="col-md-4">
-                 <img src="{{ asset('img/caab24.png') }}" width="30" alt="CAAB" class="me-2">
+                 <img src="{{ asset('img/caab24.png') }}" width="150" alt="CAAB" class="me-2">
             </div>
             <div class="col-md-8"> 
                 <h2> Welcome to <br>
