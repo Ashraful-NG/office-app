@@ -5,9 +5,11 @@
         <div class="row">
             <h2 class="text-center">Welcome</h2>
         </div>
-        <div class="row justify-content-center">
+        <div class="row justify-content-center bg-white">
             <div class="col-md-8 shadow"> 
-                    <img src="{{ asset('img/stock-photo-folders.jpeg') }}" class="img-fluid" alt="Responsive image"> 
+               <h2> Welcome to <br>
+                Document Management System (DMS)</h2>
+
             </div>
         </div>
     </div>
