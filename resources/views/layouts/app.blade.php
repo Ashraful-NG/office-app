@@ -81,23 +81,22 @@
                         <!-- Logout Form -->
     
 
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <a  class="nav-link " href="#">
                                 {{ Auth::user()->name }}
                             </a>
                         
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            {{-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <!-- User Profile Link or Additional Dropdown Items -->
                         
                                 {{-- <a class="dropdown-item" href="{{ route('profile') }}">
                                     {{ __('Profile') }}
                                 </a> --}}
                         
-                                <div class="dropdown-divider"></div>
+                                {{-- <div class="dropdown-divider"></div> --}}
                         
                                 <!-- Logout Link -->
-                               
-                            </div>
+{{--                                
+                            </div> --}}  
                         </li>
                         
                         <li class="nav-item dropdown">
