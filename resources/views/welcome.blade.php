@@ -161,9 +161,9 @@
             </div>
             <div class="col-md-6 text-end text-white">
                 <ul class="list-inline">
-                    <li class="list-inline-item"><a href="#">Terms</a></li>
-                    <li class="list-inline-item"><a href="#">Privacy</a></li>
-                    <li class="list-inline-item"><a href="#">Cookie Policy</a></li>
+                    <li class="list-inline-item"><a href="#" style="color: #FFF; text-decoration: none;">Terms</a></li>
+                    <li class="list-inline-item"><a href="#" style="color: #FFF; text-decoration: none;">Privacy</a></li>
+                    <li class="list-inline-item"><a href="#" style="color: #FFF;  text-decoration: none;">Cookie Policy</a></li>
                 </ul>
             </div>
         </div>
