@@ -56,7 +56,9 @@
                                         <th>Tag</th>
                                         <th>Onlyuser</th>
                                         <th>Status</th>
-                                        <th>File Name</th>                                        
+                                        <th>File Name</th>      
+                                        <th>Add at</th>      
+                                        <th>Updated at</th>                                        
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -71,6 +73,8 @@
                                                 <td>{{ $document->user->name }}</td>
                                                 <td>{{ $document->status }}</td>
                                                 <td>{{ basename($document->file_path) }}</td>
+                                                <td>{{ $document->created_at->format('d F Y') }}                                                </td>
+                                                <td>{{ $document->updated_at->format('d F Y') }}</td>
                                                 {{-- <td>{{ $document->description }}</td> --}}
 
                                                 <td>
