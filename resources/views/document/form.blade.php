@@ -53,8 +53,8 @@
             </div>
         </div>
         <div class="text-center mt-3">
-            <button type="submit" class="btn btn-primary btn-lg">{{ __('Submit') }}</button>
-            <a href="{{ route('document.index') }}" class="btn btn-secondary btn-lg">{{ __('Cancel') }}</a>
+            <button type="submit" class="btn btn-dark btn-lg">{{ __('Submit') }}</button>
+            <a href="{{ route('document.index') }}" class="btn  btn btn-danger btn-lg">{{ __('Cancel') }}</a>
         </div>
     </div>
 </div>
