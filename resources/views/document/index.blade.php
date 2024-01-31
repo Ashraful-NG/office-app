@@ -73,11 +73,11 @@
                                                 <td>{{ $document->user->name }}</td>
                                                 <td>{{ $document->status }}</td>
                                                 <td>{{ basename($document->file_path) }}</td>
-                                                <td>{{ $document->created_at->format('d F Y') }}                                                </td>
+                                                <td>{{ $document->created_at->format('d F Y') }}  <td>                                              </td>
                                                 <td>{{ $document->updated_at->format('d F Y') }}</td>
                                                 {{-- <td>{{ $document->description }}</td> --}}
 
-                                                <td>
+                                                
                                                     
                                                     
                                                         @if (auth()->check() && auth()->user()->role && auth()->user()->role->name == 'superadmin')
