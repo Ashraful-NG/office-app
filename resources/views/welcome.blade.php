@@ -119,7 +119,7 @@
 
 
         <div class="container">
-            <div class="row d-flex align-items-center justify-content-center">
+            <div class="row d-flex align-items-center justify-content-center my-5">
                 <!-- Left Column -->
                 <div class="col-md-6">
                     <h2 style="color: #022C22;
@@ -150,6 +150,24 @@
             
         </div>
     </div>
+    <!-- Footer -->
+<footer class="bg-black text-white py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p>&copy; 2024 Your Company Name</p>
+            </div>
+            <div class="col-md-6 text-end">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#">Terms</a></li>
+                    <li class="list-inline-item"><a href="#">Privacy</a></li>
+                    <li class="list-inline-item"><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
     <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
     {{-- <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script> --}}
     <script src="{{ asset('js/custom.js') }}"></script>
