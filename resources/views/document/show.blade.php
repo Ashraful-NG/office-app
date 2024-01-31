@@ -10,7 +10,7 @@
             <div class="col-md-12 bg-white  shadow rounded">                  
              
                         <div
-                            class="alert alert-danger m-5"
+                            class="alert alert-danger"
                             role="alert"
                         >
                         <h5>To Zoom In and Out on a Web Page:</h5>
