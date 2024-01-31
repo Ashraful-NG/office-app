@@ -11,7 +11,7 @@
 
                 @includeif('partials.errors')
 
-                    <div class=" bg-white shadow ">
+                    <div class=" bg-white shadow rounded p-5">
                         <span class="h2">{{ __('Create') }} Document</span>
                         <form method="POST" action="{{ route('document.store') }}" role="form"
                             enctype="multipart/form-data">
