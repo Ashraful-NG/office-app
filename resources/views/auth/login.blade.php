@@ -29,7 +29,13 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
  
-
+<style>
+     body{
+        background: url(http://182.163.114.225:8044/img/caab24.png) no-repeat;
+    background-position: center;
+    background-size: 40%;
+     }
+</style>
 </head>
 
 <body style="
