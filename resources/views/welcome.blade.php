@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -20,7 +19,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ asset('css/all.min.css') }}">
-    {{-- <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"> --}}
+    {{--
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -29,7 +29,7 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
- 
+
 
 </head>
 
@@ -50,65 +50,65 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     @if (auth()->check())
-                        <ul class="navbar-nav me-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('document.index') }}">Documents</a>
-                            </li>
-                        </ul>
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('document.index') }}">Documents</a>
+                        </li>
+                    </ul>
                     @endif
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
                         @guest
-                            @if (Route::has('login'))
-                            <li class="nav-item">
-                                <a class="btn btn-dark px-5" href="{{ route('login') }}">
-                                    {{ __('Login') }}
-                                </a>
-                            </li>
-                            
-                            @endif
+                        @if (Route::has('login'))
+                        <li class="nav-item">
+                            <a class="btn btn-dark px-5" href="{{ route('login') }}">
+                                {{ __('Login') }}
+                            </a>
+                        </li>
 
-                            @if (Route::has('register'))
-                                <li class="nav-item d-none">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
+                        @endif
+
+                        @if (Route::has('register'))
+                        <li class="nav-item d-none">
+                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        </li>
+                        @endif
                         @else
-                       
-                        <li>
-                
-                        <!-- Logout Form -->
-    
 
-                            <a  class="nav-link " href="#">
+                        <li>
+
+                            <!-- Logout Form -->
+
+
+                            <a class="nav-link " href="#">
                                 {{ Auth::user()->name }}
                             </a>
-                        
+
                             {{-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <!-- User Profile Link or Additional Dropdown Items -->
-                        
+
                                 {{-- <a class="dropdown-item" href="{{ route('profile') }}">
                                     {{ __('Profile') }}
                                 </a> --}}
-                        
+
                                 {{-- <div class="dropdown-divider"></div> --}}
-                        
+
                                 <!-- Logout Link -->
-{{--                                
-                            </div> --}}  
+                                {{--
+                            </div> --}}
                         </li>
-                        
+
                         <li class="nav-item dropdown">
                             <a class=" btn btn-danger" href="{{ route('logout') }}"
-                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
-                        </a>
-                       
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
+                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
                         </li>
                         @endguest
                     </ul>
@@ -116,29 +116,38 @@
             </div>
         </nav>
 
-    
+
 
         <div class="container">
-                <div class="row ">
-                    <div class="col-md-6"> 
-                        <h2 style="color:  #022C22;
+            <div class="row d-flex align-items-center justify-content-center">
+                <!-- Left Column -->
+                <div class="col-md-6">
+                    <h2 style="color: #022C22;
                         font-family: Poppins;
                         font-size: 32px;
                         font-style: normal;
                         font-weight: 700;
                         line-height: normal;
-                        text-transform: capitalize;">Welcome to Document Management System (DMS)</h2>
-        <p>A document management system (DMS) is a software that helps to store, organize, track, and retrieve digital documents. A DMS can also provide features such as version control, access control, search, and collaboration. A DMS can help to reduce paper usage, improve workflow, enhance security, and comply with legal requirements.
-        </p>
-                         <a class="btn btn-danger btn-lg px-5 w-100" href="{{ route('login') }}">
-                            {{ __('Login') }}
-                        </a>
-                     </div>
-            <div class="col-md-6">
-                 <img src="{{ asset('Hero.png') }}"  width="100%" alt="CAAB" class="me-2">
+                        text-transform: capitalize;">
+                        Welcome to Document Management System (DMS)
+                    </h2>
+                    <p>
+                        A document management system (DMS) is a software that helps to store, organize, track, and
+                        retrieve digital documents. A DMS can also provide features such as version control, access
+                        control, search, and collaboration. A DMS can help to reduce paper usage, improve workflow,
+                        enhance security, and comply with legal requirements.
+                    </p>
+                    <a class="btn btn-danger btn-lg px-5 w-100" href="{{ route('login') }}">
+                        {{ __('Login') }}
+                    </a>
+                </div>
+            
+                <!-- Right Column -->
+                <div class="col-md-6">
+                    <img src="{{ asset('Hero.png') }}" width="100%" alt="CAAB" class="me-2">
+                </div>
             </div>
             
-            </div>
         </div>
     </div>
     <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
@@ -147,4 +156,3 @@
 </body>
 
 </html>
-
