@@ -38,7 +38,7 @@
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img src="{{ asset('img/caab24.png') }}" width="30" alt="CAAB" class="me-2">
-                    {{ config('app.name', 'Laravel') }}
+                    DMS
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
