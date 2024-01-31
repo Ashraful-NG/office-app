@@ -75,16 +75,20 @@
                             @endif
                         @else
                         <li class="nav-item dropdown">
-                            <a class="dropdown-item btn btn-danger" href="{{ route('logout') }}"
+                            <a class=" btn btn-danger" href="{{ route('logout') }}"
                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}
                         </a>
-                
-                        <!-- Logout Form -->
+                       
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
                         </form>
-                        
+                        </li>
+                        <li>
+                
+                        <!-- Logout Form -->
+    
+
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}
