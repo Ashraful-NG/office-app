@@ -39,7 +39,7 @@
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img src="{{ asset('img/caab24.png') }}" width="60" alt="CAAB" class="me-2">
-                   <span style="color:  #334155;
+                    <span style="color:  #334155;
                    font-family: Poppins;
                    font-size: 16px;
                    font-style: normal;
@@ -144,7 +144,8 @@
                         control, search, and collaboration. A DMS can help to reduce paper usage, improve workflow,
                         enhance security, and comply with legal requirements.
                     </p>
-                    <a  style="
+                    <a style="
+                    color:  #FFF;
                     display: flex;
 height: 58px;
 padding: 16px 24px;
@@ -154,37 +155,41 @@ gap: 12px;
 border-radius: 18px;
                     background: var(--color-emerald-950, #022C22);
                     box-shadow: 0px 10px 20px 0px rgba(70, 16, 185, 0.30);
+                    width:150px
                     
                     " href="{{ route('login') }}">
                         {{ __('Login') }}
                     </a>
                 </div>
-            
+
                 <!-- Right Column -->
                 <div class="col-md-6">
                     <img src="{{ asset('Hero.png') }}" width="100%" alt="CAAB" class="me-2">
                 </div>
             </div>
-            
+
         </div>
     </div>
     <!-- Footer -->
-<footer class="bg-black text-white py-3">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <p>&copy; 2024 Your Company Name</p>
-            </div>
-            <div class="col-md-6 text-end text-white">
-                <ul class="list-inline">
-                    <li class="list-inline-item"><a href="#" style="color: #FFF; text-decoration: none;">Terms</a></li>
-                    <li class="list-inline-item"><a href="#" style="color: #FFF; text-decoration: none;">Privacy</a></li>
-                    <li class="list-inline-item"><a href="#" style="color: #FFF;  text-decoration: none;">Cookie Policy</a></li>
-                </ul>
+    <footer class="bg-black text-white py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2024 Your Company Name</p>
+                </div>
+                <div class="col-md-6 text-end text-white">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#" style="color: #FFF; text-decoration: none;">Terms</a>
+                        </li>
+                        <li class="list-inline-item"><a href="#" style="color: #FFF; text-decoration: none;">Privacy</a>
+                        </li>
+                        <li class="list-inline-item"><a href="#" style="color: #FFF;  text-decoration: none;">Cookie
+                                Policy</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
     <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
     {{-- <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script> --}}
