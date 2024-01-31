@@ -119,9 +119,6 @@
     
 
         <div class="container">
-        
-        
-            <div class="shadow p-5 my-5 rounded mx-auto" style="background: #E0E7FF;">
                 <div class="row ">
                     <div class="col-md-6"> 
                         <h2 style="color:  #022C22;
@@ -138,14 +135,11 @@
                         </a>
                      </div>
             <div class="col-md-6">
-                 <img src="{{ asset('Hero.png') }}"  height="300px" alt="CAAB" class="me-2">
+                 <img src="{{ asset('Hero.png') }}"  width="100%" alt="CAAB" class="me-2">
             </div>
             
             </div>
         </div>
-    </div>
- 
-
     </div>
     <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
     {{-- <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script> --}}
