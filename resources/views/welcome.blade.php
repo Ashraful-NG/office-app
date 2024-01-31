@@ -14,7 +14,9 @@
                         font-weight: 700;
                         line-height: normal;
                         text-transform: capitalize;">Welcome to Document Management System (DMS)</h2>
-        <p>We can help you every step of the way, from registering the business to filing the necessary paperwork with the IRS to qualify as a 501(c)(3) entity.</p>
+        <p>
+            A document management system (DMS) is a software that helps to store, organize, track, and retrieve digital documents. A DMS can also provide features such as version control, access control, search, and collaboration. A DMS can help to reduce paper usage, improve workflow, enhance security, and comply with legal requirements.
+        </p>
                          <a class="btn btn-danger btn-lg px-5 w-100" href="{{ route('login') }}">
                             {{ __('Login') }}
                         </a>
