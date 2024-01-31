@@ -67,7 +67,7 @@
                                                 <td>{{ $document->tag }}</td>
                                                 <td>{{ $document->user->name }}</td>
                                                 <td>{{ $document->status }}</td>
-                                                <td>  <a href="{{ route('document.show', $document->id) }}"><span class="badge bg-dark">{{ Storage::mimeType($document->file_path) }} </span></a>
+                                                <td>  <a href="{{ route('document.show', $document->id) }}"><span class="badge bg-dark btn-lg">{{ Storage::mimeType($document->file_path) }} </span></a>
                                                     {{-- {{ basename($document->file_path) }} --}}
                                                 </td>
                                                 <td>{{ $document->created_at->format('d F Y') }}  </td>
