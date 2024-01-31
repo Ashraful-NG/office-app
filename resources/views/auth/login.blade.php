@@ -31,9 +31,7 @@
  
 <style>
      body{
-        background: url(http://182.163.114.225:8044/img/caab24.png) no-repeat;
-    background-position: center;
-    background-size: 40%;
+        background: #E0E7FF;
      }
 </style>
 </head>
@@ -185,7 +183,9 @@ overflow: hidden;
                         @endif
                     </div>
                     <div class="">
-                        <button class="btn submit-btn" type="submit">{{ __('Login') }}</button>
+                        <button style="
+                        background-color: #28479d;
+                    " class="btn submit-btn" type="submit">{{ __('Login') }}</button>
                     </div>
                 </form>
             </div>
