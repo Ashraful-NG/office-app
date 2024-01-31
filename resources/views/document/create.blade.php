@@ -11,11 +11,8 @@
 
                 @includeif('partials.errors')
 
-                <div class="card bg-white">
-                    <div class="card-header">
-                        <span class="card-title">{{ __('Create') }} Document</span>
-                    </div>
-                    <div class="card-body">
+                    <div class=" bg-white shadow ">
+                        <span class="h2">{{ __('Create') }} Document</span>
                         <form method="POST" action="{{ route('document.store') }}" role="form"
                             enctype="multipart/form-data">
                             @csrf
@@ -23,7 +20,6 @@
                             @include('document.form')
 
                         </form>
-                    </div>
                 </div>
             </div>
         </div>
