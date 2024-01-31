@@ -72,8 +72,10 @@
                                                 <td>{{ $document->tag }}</td>
                                                 <td>{{ $document->user->name }}</td>
                                                 <td>{{ $document->status }}</td>
-                                                <td>{{ basename($document->file_path) }}</td>
-                                                <td>{{ $document->created_at->format('d F Y') }}  </td>                                              </td>
+                                                <td>{{ Storage::mimeType($document->file_path) }} 
+                                                    {{-- {{ basename($document->file_path) }} --}}
+                                                </td>
+                                                <td>{{ $document->created_at->format('d F Y') }}  </td>
                                                 <td>{{ $document->updated_at->format('d F Y') }}</td>
                                                 {{-- <td>{{ $document->description }}</td> --}}
 
