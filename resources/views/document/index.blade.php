@@ -7,7 +7,7 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 bg-white p-3"> 
+            <div class="col-sm-12 bg-white p-5 shadow rounded"> 
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title" class="h2">
