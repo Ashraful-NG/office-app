@@ -119,7 +119,7 @@
 
 
         <div class="container" style="
-        height: 83vh;
+        height: 80vh;
     ">
             <div class="row d-flex align-items-center justify-content-center my-5">
                 <!-- Left Column -->
@@ -139,7 +139,7 @@
                         control, search, and collaboration. A DMS can help to reduce paper usage, improve workflow,
                         enhance security, and comply with legal requirements.
                     </p>
-                    <a class="btn btn-danger btn-lg px-5 w-100" href="{{ route('login') }}">
+                    <a class="btn btn-danger btn-lg px-5 " href="{{ route('login') }}">
                         {{ __('Login') }}
                     </a>
                 </div>
