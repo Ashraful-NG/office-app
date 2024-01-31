@@ -32,12 +32,12 @@
 
 </head>
 
-<body>
+<body style="background: #E0E7FF;">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="{{ asset('img/caab24.png') }}" width="30" alt="CAAB" class="me-2">
+                    <img src="{{ asset('img/caab24.png') }}" width="50" alt="CAAB" class="me-2">
                     DMS
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
