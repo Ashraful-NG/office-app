@@ -7,7 +7,7 @@
 @section('content')
     <section class="content container">
         <div class="row">
-            <div class="col-md-12 bg-white  shadow rounded">                  
+            <div class="col-md-12 p-2 bg-white  shadow rounded">                  
              
                         <div
                             class="alert alert-danger"
