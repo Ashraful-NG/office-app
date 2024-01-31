@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Document;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class DocumentController extends Controller
@@ -41,6 +42,7 @@ class DocumentController extends Controller
   
     public function create()
     {
+        $user = User::all();
         $document = new Document();
         return view('document.create', compact('document'));
     }
