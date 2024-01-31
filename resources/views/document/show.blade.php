@@ -7,7 +7,7 @@
 @section('content')
     <section class="content container">
         <div class="row">
-            <div class="col-md-12 bg-white">                  
+            <div class="col-md-12 bg-white  shadow rounded">                  
              
                         <div
                             class="alert alert-danger m-5"
@@ -20,7 +20,7 @@
                         Note: This zoom functionality works on most web browsers and applications that support zooming.<br>
                         </div>
 
-                        <div class="form-group shadow rounded">
+                        <div class="form-group">
                             <strong>Title:</strong>
                             {{ $document->title }}
                        
