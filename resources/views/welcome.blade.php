@@ -144,7 +144,18 @@
                         control, search, and collaboration. A DMS can help to reduce paper usage, improve workflow,
                         enhance security, and comply with legal requirements.
                     </p>
-                    <a class="btn btn-danger btn-lg px-5 " href="{{ route('login') }}">
+                    <a  style="
+                    display: flex;
+height: 58px;
+padding: 16px 24px;
+justify-content: center;
+align-items: center;
+gap: 12px;
+border-radius: 18px;
+                    background: var(--color-emerald-950, #022C22);
+                    box-shadow: 0px 10px 20px 0px rgba(70, 16, 185, 0.30);
+                    
+                    " href="{{ route('login') }}">
                         {{ __('Login') }}
                     </a>
                 </div>
