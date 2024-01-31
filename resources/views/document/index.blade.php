@@ -7,9 +7,7 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-sm-12">
-                <div class="card bg-white">
-                    <div class="card-header">
+            <div class="col-sm-12 bg-white"> 
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
@@ -24,21 +22,18 @@
                                 </div>
                             @endif
                         </div>
-                    </div>
-                    @if ($message = Session::get('success'))
-                        <div class="alert alert-success m-3" id="successAlert">
-                            <p>{{ $message }}</p>
-                        </div>
-                        <script>
-                            setTimeout(function() {
-                                document.getElementById('successAlert').style.display = 'none';
-                            }, 10000);
-                        </script>
-                    @endif
-
-                    <div class="card-body">
                         <div class="table-responsive">
-                            <div class="container mt-3">
+                            <div class="container p-3">
+                                @if ($message = Session::get('success'))
+                                <div class="alert alert-success m-3" id="successAlert">
+                                    <p>{{ $message }}</p>
+                                </div>
+                                <script>
+                                    setTimeout(function() {
+                                        document.getElementById('successAlert').style.display = 'none';
+                                    }, 10000);
+                                </script>
+                            @endif
                                 <form method="get" action="{{ route('document.index') }}">
                                     <div class="input-group mb-3">
                                         <input type="text" name="search" value="{{ $search }}" class="form-control"
@@ -121,7 +116,6 @@
                             </table>
                         </div>
                     </div>
-                </div>
                 {!! $documents->links() !!}
             </div>
         </div>
