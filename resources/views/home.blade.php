@@ -13,6 +13,7 @@
                         </div>
                     @endif
                     {{ __('You are logged in!') }}
+                    @dd(  $data)
                 </div>
             </div>
         </div>
