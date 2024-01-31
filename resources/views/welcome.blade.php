@@ -118,7 +118,9 @@
 
 
 
-        <div class="container">
+        <div class="container" style="
+        height: 83vh;
+    ">
             <div class="row d-flex align-items-center justify-content-center my-5">
                 <!-- Left Column -->
                 <div class="col-md-6">
@@ -157,7 +159,7 @@
             <div class="col-md-6">
                 <p>&copy; 2024 Your Company Name</p>
             </div>
-            <div class="col-md-6 text-end">
+            <div class="col-md-6 text-end text-white">
                 <ul class="list-inline">
                     <li class="list-inline-item"><a href="#">Terms</a></li>
                     <li class="list-inline-item"><a href="#">Privacy</a></li>
