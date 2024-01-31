@@ -20,7 +20,7 @@
                         Note: This zoom functionality works on most web browsers and applications that support zooming.<br>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group shadow rounded">
                             <strong>Title:</strong>
                             {{ $document->title }}
                        
