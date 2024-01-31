@@ -75,7 +75,7 @@
                                                 {{-- <td>{{ $document->description }}</td> --}}
 
                                                 
-                                                    <td>
+                                                    <td class="text-end">
                                                     
                                                         @if (auth()->check() && auth()->user()->role && auth()->user()->role->name == 'superadmin')
                                                         <div class="btn-group" role="group" aria-label="Document Actions">
