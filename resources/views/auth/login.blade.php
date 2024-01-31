@@ -118,14 +118,13 @@ overflow: hidden;
         </nav>
 
         <main class="py-4">
-
-<section id="login" class="d-flex align-items-center pb-5">
+<section id="login" class="d-flex align-items-center pb-5" style=" min-height: 80vh; ">
     <div class="login-panel">
         <div class="login-section">
             <div>
                 <h3 class="mb-4 h4 d-flex align-items-center justify-content-center">
                     <img src="{{ asset('img/caab24.png') }}" width="100" alt="CAAB" class="me-2">
-                    <span>LOGIN</span>
+                    {{-- <span>LOGIN</span> --}}
                 </h3>
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
