@@ -7,15 +7,15 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 bg-white"> 
+            <div class="col-sm-12 bg-white p-3"> 
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
-                            <span id="card_title">
+                            <span id="card_title" class="h2">
                                 {{ __('All Documents') }}
                             </span>
                             @if (auth()->check() && auth()->user()->role && auth()->user()->role->name == 'superadmin')
                                 <div class="float-right">
-                                    <a href="{{ route('document.create') }}" class="btn btn-primary btn-sm float-right"
+                                    <a href="{{ route('document.create') }}" class="btn btn-dark btn-sm float-right"
                                         data-placement="left">
                                         {{ __('Create New') }}
                                     </a>
@@ -38,7 +38,7 @@
                                     <div class="input-group mb-3">
                                         <input type="text" name="search" value="{{ $search }}" class="form-control"
                                                placeholder="Search by title, tag, status, file path, or description" aria-label="Search" aria-describedby="basic-addon2">
-                                        <button type="submit" class="btn btn-primary">Search</button>
+                                        <button type="submit" class="btn btn-danger">Search</button>
                                     </div>
                                 </form>
                             </div>
