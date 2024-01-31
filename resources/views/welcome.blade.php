@@ -12,6 +12,10 @@
             <div class="col-md-8"> 
                 <h2> Welcome to <br>
                  Document Management System (DMS)</h2>
+
+                 <a class="btn btn-danger btn-lg px-5 w-100" href="{{ route('login') }}">
+                    {{ __('Login') }}
+                </a>
              </div>
             </div>
         </div>
