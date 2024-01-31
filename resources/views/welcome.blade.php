@@ -4,7 +4,7 @@
     <div class="container">
         
         
-            <div class="shadow p-5 my-5 rounded mx-auto" style="background: #E0E7FF);">
+            <div class="shadow p-5 my-5 rounded mx-auto" style="background: #E0E7FF;">
                 <div class="row ">
                     <div class="col-md-6"> 
                         <h2 style="color:  #022C22;
@@ -20,7 +20,7 @@
                         </a>
                      </div>
             <div class="col-md-6">
-                 <img src="{{ asset('Hero.png') }}" width="150" alt="CAAB" class="me-2">
+                 <img src="{{ asset('Hero.png') }}"   alt="CAAB" class="me-2">
             </div>
             
             </div>
