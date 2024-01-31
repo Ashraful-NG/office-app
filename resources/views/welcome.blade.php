@@ -38,7 +38,7 @@
                    font-size: 16px;
                    font-style: normal;
                    font-weight: 700;
-                   line-height: normal;"> Document Management System (DMS)</span>
+                   line-height: normal;">{{ config('app.name', 'Laravel') }}</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
