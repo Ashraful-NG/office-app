@@ -22,10 +22,22 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
-
+       
+        $search = $request->input('search');
         $data=Document::count();
-        return  view('home', compact('data'));
+        $documents = Document::when($search, function ($query) use ($search) {
+            $query->where('title', 'like', '%' . $search . '%')
+                  ->orWhere('tag', 'like', '%' . $search . '%')
+                  ->orWhere('status', 'like', '%' . $search . '%')
+                  ->orWhere('file_path', 'like', '%' . $search . '%')
+                  ->orWhere('description', 'like', '%' . $search . '%');
+        })->paginate();
+    
+        return view('document.index', compact('documents', 'search','data'))
+            ->with('i', (request()->input('page', 1) - 1) * $documents->perPage());
+
+       // return  view('home', compact('data'));
     }
 }

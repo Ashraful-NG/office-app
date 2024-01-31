@@ -11,7 +11,7 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title" class="h2">
-                                {{ __('All Documents') }}
+                                {{ __('All Documents') }} ( Total Documents: {{ $data}})
                             </span>
                             @if (auth()->check() && auth()->user()->role && auth()->user()->role->name == 'superadmin')
                                 <div class="float-right">
