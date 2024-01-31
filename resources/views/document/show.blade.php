@@ -24,19 +24,17 @@
                             <strong>Title:</strong>
                             {{ $document->title }}
                        
+                            @isset($document->tag)
                             <strong>Tag:</strong>
                             {{ $document->tag }}
-                       
-                            <strong>Onlyuser:</strong>
-                            {{ $document->onlyuser }}
+                            @endisset
+                            @isset($document->user->name )
+                            <strong>Onlyuser:</strong>                           
+                           {{ $document->user->name }}
+                           @endisset
                        
                             <strong>Status:</strong>
-                            {{ $document->status }}
-                       
-                            <strong>File Path:</strong>
-                            {{ $document->file_path }}
-
-                       
+                            {{ $document->status }} 
                             <strong>Description:</strong>
                             {{ $document->description }}
                         </div>
