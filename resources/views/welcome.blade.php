@@ -38,8 +38,13 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="{{ asset('img/caab24.png') }}" width="70" alt="CAAB" class="me-2">
-                    DMS
+                    <img src="{{ asset('img/caab24.png') }}" width="60" alt="CAAB" class="me-2">
+                   <span style="color:  #334155;
+                   font-family: Poppins;
+                   font-size: 16px;
+                   font-style: normal;
+                   font-weight: 700;
+                   line-height: normal;"> Document Management System (DMS)</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
